@@ -62,8 +62,14 @@ const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB first, then start the server
 connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-    console.log(`📡 API Base URL: http://localhost:${PORT}/api`);
-  });
+  // Only listen locally, Vercel handles the server
+  if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on http://localhost:${PORT}`);
+      console.log(`📡 API Base URL: http://localhost:${PORT}/api`);
+    });
+  }
 });
+
+// Export the express app for Vercel
+module.exports = app;
