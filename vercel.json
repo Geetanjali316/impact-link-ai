@@ -20,35 +20,35 @@
     },
     {
       "src": "/static/(.*)",
-      "dest": "/client/build/static/$1"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "/client/build/manifest.json"
+      "dest": "/client/static/$1"
     },
     {
       "src": "/favicon.ico",
-      "dest": "/client/build/favicon.ico"
+      "dest": "/client/favicon.ico"
     },
     {
-      "src": "/robots.txt",
-      "dest": "/client/build/robots.txt"
+      "src": "/manifest.json",
+      "dest": "/client/manifest.json"
     },
     {
       "src": "/logo192.png",
-      "dest": "/client/build/logo192.png"
+      "dest": "/client/logo192.png"
     },
     {
       "src": "/logo512.png",
-      "dest": "/client/build/logo512.png"
+      "dest": "/client/logo512.png"
     },
     {
-      "src": "/(.*)\\.([a-zA-Z0-9]+)$",
-      "dest": "/client/build/$1.$2"
+      "src": "/robots.txt",
+      "dest": "/client/robots.txt"
+    },
+    {
+      "src": "/asset-manifest.json",
+      "dest": "/client/asset-manifest.json"
     },
     {
       "src": "/(.*)",
-      "dest": "/client/build/index.html"
+      "dest": "/client/index.html"
     }
   ]
 }
